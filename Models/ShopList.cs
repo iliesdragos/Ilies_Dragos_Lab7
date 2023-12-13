@@ -15,5 +15,7 @@ namespace Ilies_Dragos_Lab7.Models
         [MaxLength(250), Unique]
         public string Description { get; set; }
         public DateTime Date { get; set; }
+        [SQLiteNetExtensions.Attributes.ForeignKey(typeof(Shop))]
+        public int ShopID { get; set; }
     }
 }
